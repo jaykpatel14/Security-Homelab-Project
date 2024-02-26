@@ -22,6 +22,9 @@ VMnet 1: Represents the Soc Analyst PC network with the subnet 192.168.1.0/24.
 
 VMnet 2: Represents another isolated network with the subnet 192.168.2.0/24.
 
+![Project drawio](https://github.com/jaykpatel14/Security-Homelab-Project/assets/139708703/6b91194a-ccbb-4301-bf12-5ad307be863d)
+
+
 **ISO List**
 
 To set up your Security Homelab environment, you will need the following ISOs:
@@ -59,6 +62,8 @@ Contributions to enhance the Security Homelab project are welcome! Whether it's 
 **License**
 
 This project is licensed under the MIT License, which means you are free to use, modify, and distribute the project for any purpose. However, please note that this project is provided as-is, without any warranties or guarantees.
+
+
 
 **Acknowledgments**
 
