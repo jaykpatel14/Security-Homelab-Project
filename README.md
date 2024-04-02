@@ -1,72 +1,77 @@
-# Security-Homelab-Project
+**Security Homelab Project - A Simulated Network Environment**
 
-Welcome to my Security Homelab project! This repository serves as a comprehensive guide and resource for setting up and managing a secure homelab environment for cybersecurity enthusiasts and professionals alike.
+This document outlines a home lab project designed to simulate a real-world network with various security tools integrated within a VMware Workstation environment.
 
-**Introduction**
+**Components:**
 
-In today's digital age, having hands-on experience with cybersecurity tools and techniques is essential for staying ahead in the ever-evolving field of information security. This Security Homelab project provides a practical environment where you can experiment, learn, and hone your skills in various cybersecurity domains, including network security, penetration testing, threat hunting, and more.
+VMware Workstation: Platform for creating and managing virtual machines.
 
-**Network Topology**
+pfSense: Open-source firewall for network traffic control and security.
 
-The homelab network topology is designed to mimic real-world scenarios, allowing for realistic testing and analysis. Here's an overview of the network setup:
+Security Onion: Security suite for intrusion detection, log analysis, and security event management.
 
-PfSense Firewall VM: Acts as the gateway and provides security features such as firewall, VPN, and intrusion detection/prevention. It has three interfaces:
+Splunk: Software platform for real-time data analysis and security monitoring.
 
-WAN Interface: Connected to the internet for external communication.
+Kali Linux: Ethical hacking platform for vulnerability assessment and penetration testing.
 
-VMnet 1 Interface: Connected to the Soc Analyst PC network (192.168.1.0/24).
+Windows Server 2019: Provides Active Directory services for centralized user and domain management.
 
-Internal Interface: Connected to the internal network for hosting various services and VMs.
+Windows 10 Workstation: Client machine for testing endpoint security configurations.
 
-VMnet 1: Represents the Soc Analyst PC network with the subnet 192.168.1.0/24.
+Metasploitable: Vulnerable target machine for ethical hacking exercises.
 
-VMnet 2: Represents another isolated network with the subnet 192.168.2.0/24.
+**Network Design:**
 
-![Project drawio](https://github.com/jaykpatel14/Security-Homelab-Project/assets/139708703/6b91194a-ccbb-4301-bf12-5ad307be863d)
+The home lab will simulate a network with various segments protected by pfSense. Security Onion will be deployed for intrusion detection and log analysis, with data forwarded to Splunk for centralized monitoring. Kali Linux and Purple will be used for penetration testing scenarios. Windows Server will manage user accounts and access control, while Windows 10 serves as a client machine. Metasploitable will act as a target system for testing vulnerabilities.
 
+**Benefits:**
 
-**ISO List**
+Hands-on experience with security tools.
 
-To set up your Security Homelab environment, you will need the following ISOs:
+Understanding of network security concepts.
 
-PfSense: PfSense is an open-source firewall and router platform based on FreeBSD. You can download the PfSense ISO from the official website: PfSense Downloads
+Practice with security monitoring and incident response.
 
-Kali Linux Purple: Kali Linux Purple is a specialized version of the Kali Linux distribution tailored for network monitoring and intrusion detection purposes. You can obtain the Kali Linux Purple ISO from the official Kali Linux website: Kali Linux Downloads
+Development of penetration testing skills.
 
-Kali Linux: Kali Linux is a popular Linux distribution used for penetration testing, ethical hacking, and security research. You can download the Kali Linux ISO from the official website: Kali Linux Downloads
+**Getting Started:**
 
-Metasploitable: Metasploitable is a purposely vulnerable Linux virtual machine that is designed for testing security tools and demonstrating common vulnerabilities. You can download Metasploitable from various sources, including GitHub Releases and VulnHub.
+Install VMware Workstation on your host machine.
 
-DVWA (Damn Vulnerable Web Application): DVWA is a web application intentionally designed with security vulnerabilities to practice web application security testing. You can download DVWA from the official GitHub repository: DVWA GitHub
+Download and configure virtual machine images for pfSense, Security Onion, Splunk, Kali Linux, Windows Server, Windows 10, and Metasploitable.
 
-Ensure you download the appropriate versions and editions of the software ISOs based on your hardware architecture and requirements. Once you have downloaded the necessary ISOs, you can proceed with setting up your homelab environment according to the provided network topology and instructions.
+Set up network interfaces and routing within the virtual environment.
 
-**Getting Started**
+Configure pfSense firewall rules for secure network traffic flow.
 
-To get started with the Security Homelab project, follow these steps:
+Deploy Security Onion for intrusion detection and integrate it with Splunk for centralized logging.
 
-Set up a hypervisor environment (e.g., VMware ESXi, VirtualBox).
+Set up Kali Linux and Purple for penetration testing exercises.
 
-Deploy the PfSense Firewall VM and configure the interfaces according to the provided network topology.
+Configure Windows Server for Active Directory and domain management.
 
-Create additional VMs or containers for various cybersecurity tools and services using the downloaded ISOs.
+Integrate Windows 10 workstation for testing endpoint security.
 
-Experiment with different security configurations, conduct penetration tests, analyze network traffic, and practice incident response scenarios.
+Utilize Metasploitable for safe vulnerability assessments and exploitation practices.
 
-Refer to the documentation and resources provided in this repository for guidance and support.
+**Note:**
 
-**Contributing**
+This document provides a high-level overview. Refer to the official documentation for each tool for detailed configuration instructions.
 
-Contributions to enhance the Security Homelab project are welcome! Whether it's adding new tools, improving documentation, or fixing bugs, your contributions will help make this project more valuable for the cybersecurity community. Please review the contribution guidelines before submitting any changes.
+**Additional Resources:**
 
-**License**
+pfSense Documentation: https://docs.netgate.com/pfsense/en/latest/
 
-This project is licensed under the MIT License, which means you are free to use, modify, and distribute the project for any purpose. However, please note that this project is provided as-is, without any warranties or guarantees.
+Security Onion: https://securityonionsolutions.com/
 
+Splunk Documentation: https://docs.splunk.com/Documentation
 
+Kali Linux Documentation: https://www.kali.org/docs/tools/
 
-**Acknowledgments**
+Microsoft Docs - Windows Server 2019: https://learn.microsoft.com/en-us/windows-server/
 
-Special thanks to the open-source community for creating and maintaining the tools and technologies used in this Security Homelab project. Your dedication and contributions are greatly appreciated.
+Metasploitable Project: https://www.offsec.com/kali-linux/generating-kali-raspberry-pi-images/
 
-Happy learning and exploring in your Security Homelab! 🛡️🔒
+**Disclaimer:**
+
+This project is for educational purposes only. Always practice responsible security practices and ethical hacking techniques.
